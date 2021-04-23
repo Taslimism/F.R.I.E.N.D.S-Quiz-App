@@ -3,16 +3,18 @@ var colors = require('colors/safe');
 
 
 const questionsAnswers = [{
-  question : `On the episode "the one with the truth about London", with who Monica wanted to stay in first place? 
-            a) Joey 
-            b) Paulo 
-            c) Richard 
-            d) Chandler`,
+  question : `On the episode "the one with the truth about London", with who Monica wanted to stay in first place?`,
+  option :`
+          a) Joey
+          b) Paulo
+          c) Richard
+          d) Chandler`,
             
   answer : 'a'
 },
 {
-  question : `What the coffee house used to be before?
+  question : `What the coffee house used to be before?`,
+  option :` 
             a) A coffee house
             b) A supermarket
             c) A bar
@@ -20,7 +22,8 @@ const questionsAnswers = [{
   answer : 'c'
 },
 {
-  question : `Why Phoebe and Gary's relationship didn't work out?
+  question : `Why Phoebe and Gary's relationship didn't work out?`,
+  option : `
             a) Because Gary shot a cat
             b) Because Gary shot a bird
             c) Because Phoebe didn't loved Gary
@@ -28,7 +31,8 @@ const questionsAnswers = [{
   answer : 'b'
 },
 {
-  question : `What's the name of the person Rachel gives up to marry?
+  question : `What's the name of the person Rachel gives up to marry?`,
+  option : `
             a) Barry
             b) Hugsy
             c) Mike
@@ -36,7 +40,8 @@ const questionsAnswers = [{
   answer : 'a'
 },
 {
-  question : `What is the name of Chandler's father's Las Vegas all-male burlesque?
+  question : `What is the name of Chandler's father's Las Vegas all-male burlesque?`,
+  option : `
             a) Viva Gaygas
             b) Viva Las Gaygas
             c) Viva the Gaygas
@@ -50,6 +55,7 @@ const play = (questionsAnswers) => {
   questionsAnswers.forEach((questionAnswer) => {
 
       console.log(questionAnswer.question);
+      console.log(questionAnswer.option);
       console.log();
       let ans = readLineSync.question("Your Answer? ")
       
@@ -59,9 +65,7 @@ const play = (questionsAnswers) => {
         ans = readLineSync.question("Your Answer? ");
         
       }
-      
-
-          if(questionAnswer.answer === ans) {
+      if(questionAnswer.answer === ans) {
             console.log(colors.green("Congratulations! Correct Response."));
             score++;
             console.log();
